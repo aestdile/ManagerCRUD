@@ -17,6 +17,16 @@ namespace ManagerCRUD.Services
             manager.Department = Console.ReadLine();
             Console.Write("Enter Email: ");
             manager.Email = Console.ReadLine();
+            Console.Write("Enter Phone Number: ");
+            manager.PhoneNumber = Console.ReadLine();
+            Console.Write("Enter Address: ");
+            manager.Address = Console.ReadLine();
+            Console.Write("Enter Salary: ");
+            manager.Salary = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter Hire Date (yyyy-mm-dd): ");
+            manager.HireDate = Convert.ToDateTime(Console.ReadLine());
+            Console.Write("Enter Date of Birth (yyyy-mm-dd): ");
+            manager.DateOfBirth = Convert.ToDateTime(Console.ReadLine());
             manager.Id = Guid.NewGuid(); 
             Managers.Add(manager);
             return "Manager Added Successfully";
@@ -62,6 +72,17 @@ namespace ManagerCRUD.Services
                 existingManager.Department = Console.ReadLine();
                 Console.Write("Enter Email: ");
                 existingManager.Email = Console.ReadLine();
+                Console.Write("Enter Phone Number: ");
+                existingManager.PhoneNumber = Console.ReadLine();
+                Console.Write("Enter Address: ");
+                existingManager.Address = Console.ReadLine();
+                Console.Write("Enter Salary: ");
+                existingManager.Salary = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter Hire Date (yyyy-mm-dd): ");
+                existingManager.HireDate = Convert.ToDateTime(Console.ReadLine());
+                Console.Write("Enter Date of Birth (yyyy-mm-dd): ");
+                existingManager.DateOfBirth = Convert.ToDateTime(Console.ReadLine());
+                existingManager.Id = manager.Id;
                 return "Manager Updated Successfully";
             }
             return "Manager Not Found";
