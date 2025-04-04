@@ -51,7 +51,7 @@ namespace ManagerCRUD
                         Manager foundManager = managerService.GetManagerById(searchId);
                         if (foundManager != null)
                         {
-                            Console.WriteLine($"Name: {foundManager.Name}, Department: {foundManager.Department}, Email: {foundManager.Email}");
+                            Console.WriteLine($"Name: {foundManager.Name}, Department: {foundManager.Department}, Email: {foundManager.Email}, PhoneNumber: {foundManager.PhoneNumber}, Adress: {foundManager.Address}, Salary: {foundManager.Salary}, HireDate: {foundManager.HireDate}, Date of Birth: {foundManager.DateOfBirth}");
                         }
                         else
                         {
@@ -64,7 +64,7 @@ namespace ManagerCRUD
                         {
                             foreach (var manager in managers)
                             {
-                                Console.WriteLine($"ID: {manager.Id}, Name: {manager.Name}, Department: {manager.Department}, Email: {manager.Email}");
+                                Console.WriteLine($"Name: {manager.Name}, Department: {manager.Department}, Email: {manager.Email}, PhoneNumber: {manager.PhoneNumber}, Adress: {manager.Address}, Salary: {manager.Salary}, HireDate: {manager.HireDate}, Date of Birth: {manager.DateOfBirth}");
                             }
                         }
                         else
